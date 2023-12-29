@@ -60,7 +60,9 @@ def main():
     header_col, metric_column = st.columns([7,1])
     with header_col:
         # Artzy Heading with Rainbow divider underneath!
-        st.header("Artzy", divider="violet")
+        st.header("Welcome to Artzy")
+        st.subheader("-where Art meet Innovation & Collaboration")
+        st.header(divider = "rainbow")
     with metric_column: 
         st.metric(label="Generated",value=get_number_of_sketches(), delta="sketches")
 
