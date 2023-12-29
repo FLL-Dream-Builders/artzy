@@ -65,6 +65,7 @@ def main():
         st.metric(label="Generated",value=get_number_of_sketches(), delta="sketches")
 
     # Add File upload widget
+    st.subheader("Only Images are supported (JPEG or PNG)", color="red")
     uploaded_file = st.file_uploader("Upload a picture or art to create a sketch (Note: We do not store any art that is uploaded and will be used only to generate a sketch for you)")
     if uploaded_file is not None:
         bytes_data = uploaded_file.getvalue()
