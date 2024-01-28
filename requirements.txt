@@ -4,3 +4,5 @@ Pillow
 numpy
 supabase
 st-star-rating
+streamlit-image-select
+cvzone
