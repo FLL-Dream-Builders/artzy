@@ -6,7 +6,7 @@ import io
 from supabase import create_client, Client
 from streamlit_star_rating import st_star_rating
 from streamlit_image_select import image_select
-import tomllib
+import toml
 
 
 ###
@@ -213,8 +213,7 @@ def show_current_sketch_feedback(container):
 
 def initialize_defaults():
     # Load preset images 
-    with open("images/index.toml", "rb") as f:
-        st.session_state.preset_images = tomllib.load(f)
+    st.session_state.preset_images = toml.load("images/index.toml")
     # Set default selection UI mode to FILE
     if("current_selection" not in st.session_state):
         st.session_state.current_selection = "LIBRARY"
